@@ -1,0 +1,41 @@
+{
+  "name": "conductor-as-code",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Conductor as Code monorepo",
+  "license": "MIT",
+  "packageManager": "pnpm@10.5.2",
+  "scripts": {
+    "dev": "pnpm --filter @cac/cli dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "pnpm exec eslint --fix --max-warnings=0"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "pnpm exec prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "turbo": "^2.0.7",
+    "tsup": "^8.1.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^1.6.0"
+  }
+}
