@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cac/core": ["packages/core/src/index"],
+      "@cac/core/*": ["packages/core/src/*"],
+      "@cac/logger": ["packages/logger/src/logger"],
+      "@cac/logger/*": ["packages/logger/src/*"]
+    }
+  },
+  "include": ["apps", "packages"]
+}
