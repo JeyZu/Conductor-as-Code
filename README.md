@@ -11,9 +11,9 @@ Manage Netflix Conductor workflows as declarative code with a batteries-included
 ```mermaid
 flowchart TD
     Dev[Developer]
-    CLI[cac CLI]
-    Core[@cac/core]
-    Logger[@cac/logger]
+    CLI["cac CLI"]
+    Core["@cac/core"]
+    Logger["@cac/logger"]
     FS[(manifests/*)]
 
     Dev -->|runs commands| CLI
